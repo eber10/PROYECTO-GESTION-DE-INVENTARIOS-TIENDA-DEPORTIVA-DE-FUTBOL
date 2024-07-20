@@ -7,8 +7,8 @@ using namespace std;
 
 int main()
 {   //tam=10 variable utilizado para definir el tamaño, útil para modificar el tamaño de todos los arreglos que utilicen esa variable
-	const int tam=10;
-	int n=10;
+	const int tam=100;
+	int n1=10, n2=10, n3=10, n4=10, n5=10, n6=10;
 	//productos almacenados inicialmente
 	camisetas camiseta[tam]={
 		{"barca", "M", "adidas", 40.00, 2},
@@ -107,12 +107,12 @@ int main()
 					cin>>producto;
 					switch(producto)
 					{   //funciones utilizadas para mostrar la lista
-						case 1:mostrar_camisetas(camiseta, n);break;
-						case 2:mostrar_shorts(pantalon_corto, n);break;
-						case 3:mostrar_zapatillas(calzado, n);break;
-						case 4:mostrar_canilleras(protectores, n);break;
-						case 5:mostrar_medias(media_larga, n);break;
-						case 6:mostrar_balones(pelota, n);break;
+						case 1:mostrar_camisetas(camiseta, n1);break;
+						case 2:mostrar_shorts(pantalon_corto, n2);break;
+						case 3:mostrar_zapatillas(calzado, n3);break;
+						case 4:mostrar_canilleras(protectores, n4);break;
+						case 5:mostrar_medias(media_larga, n5);break;
+						case 6:mostrar_balones(pelota, n6);break;
 						default:break;
 					}
 				}
