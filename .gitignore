@@ -1,3 +1,5 @@
+#Ingorar todos los archivos con la extensión .layout
+*.layout
 # Prerequisites
 *.d
 
