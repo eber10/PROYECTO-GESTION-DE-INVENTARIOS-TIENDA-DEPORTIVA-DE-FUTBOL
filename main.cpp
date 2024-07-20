@@ -88,6 +88,7 @@ int main()
 	do
 	{
 		cout<<"1. mostrar lista de productos"<<endl;
+		cout<<"2. Agregar producto"<<endl;
 		cout<<"0. salir"<<endl;
 		cin>>op;
 		switch(op)
@@ -117,8 +118,40 @@ int main()
 					}
 				}
 				while(producto!=0);
+				
 				break;
 			case 2: //franklin
+				int op;
+				do
+				{   
+					cout<<endl<<"seleccione el producto a agregar"<<endl;
+					cout<<"--------------------------------"<<endl;
+					cout<<"1. camisetas"<<endl;
+					cout<<"2. shorts"<<endl;
+					cout<<"3. zapatillas"<<endl;
+					cout<<"4. canilleras"<<endl;
+					cout<<"5. medias"<<endl;
+					cout<<"6. balones"<<endl;
+					cout<<"0. atras"<<endl;
+					cin>>op;
+					switch(op)
+					{   
+						case 1:
+							agregar_camisetas(camiseta, n1); break;
+						case 2:
+							agregar_shorts(pantalon_corto, n2); break;
+						case 3:
+							agregar_zapatillas(calzado, n3); break;
+						case 4:
+							agregar_canilleras(protectores, n4); break;
+						case 5:
+							agregar_medias( media_larga, n5); break;
+						case 6:
+							agregar_balones(pelota, n6); break;
+						default:break;
+					}
+				}
+				while(op!=0); 
 				break;
 			case 3: //franklin
 			    break;
