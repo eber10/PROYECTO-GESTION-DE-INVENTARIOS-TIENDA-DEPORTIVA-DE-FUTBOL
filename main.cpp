@@ -3,15 +3,15 @@
 #include"funciones.h"
 #include"estructuras.h"
 #include<iomanip>
+#include<conio.h>
 using namespace std;
 
-int main()
-{   //tam=10 variable utilizado para definir el tamaño, útil para modificar el tamaño de todos los arreglos que utilicen esa variable
-	const int tam=100;
+int main() {   //tam=10 variable utilizado para definir el tamaño, útil para modificar el tamaño de todos los arreglos que utilicen esa variable
+    const int tam=100;
 	int n1=10, n2=10, n3=10, n4=10, n5=10, n6=10;
 	//productos almacenados inicialmente
 	camisetas camiseta[tam]={
-		{"barca", "M", "adidas", 40.00, 2},
+		{"barca", "M", "adidas", 40.00, 2},  
 		{"madrid", "S", "adidas", 40.00, 2},
 		{"river", "S", "adidas", 40.00, 2},
 		{"psg", "S", "adidas", 40.00, 2},
@@ -43,8 +43,8 @@ int main()
 		{"rosado", 45, "nike", 300.00, 2},
 		{"negro", 43, "adidas", 500.00, 2},
 		{"plomo", 35, "puma", 400.00, 2},
-		{"azul", 30, "nike", 30.00, 2},
-		{"verde", 40, "umbro", 30.00, 2}
+		{"azul", 30, "nike", 300.00, 2},
+		{"verde", 40, "umbro", 300.00, 2}
 	};
 	canilleras protectores[tam]={
 		{"rojo", "M", "adidas", 30.00, 2},
@@ -84,88 +84,136 @@ int main()
 	};
 	
 	
-	int op;
-	do
-	{
-		cout<<"1. mostrar lista de productos"<<endl;
-		cout<<"2. Agregar producto"<<endl;
-		cout<<"0. salir"<<endl;
-		cin>>op;
-		switch(op)
-		{   //opción 1 que contiene un menú, muestra una lista de productos según la opción a elegir
-			case 1: //eber
+	int opcion;
+	bool salir = false;
+	
+	do{
+		cout << "---------------------------------------------------------------------" << endl;
+        cout << "                              MENU PRINCIPAL                         " << endl;
+        cout << "---------------------------------------------------------------------" << endl;
+        cout << "1. Mostrar lista de productos" << endl;
+        cout << "2. Agregar producto" << endl;
+        cout << "4. Actualizar datos de producto" << endl;
+        cout << "0. Salir" << endl;
+        cout << "\n___________________________________________________________________" << endl;
+        cout << "\nIngrese su opción: ";
+        cin  >> opcion;
+        cout << endl;
+
+		switch(opcion) {   //opción 1 que contiene un menú, muestra una lista de productos según la opción a elegir
+		//  EBER 
+			case 1: {
 				int producto;
-				do
-				{   //menú para mostrar según el tipo de producto a seleccionar
-					cout<<"--------------------------------------------------------------------------------------------"<<endl;
-					cout<<"1. camisetas"<<endl;
-					cout<<"2. shorts"<<endl;
-					cout<<"3. zapatillas"<<endl;
-					cout<<"4. canilleras"<<endl;
-					cout<<"5. medias"<<endl;
-					cout<<"6. balones"<<endl;
-					cout<<"0. atras"<<endl;
-					cin>>producto;
-					switch(producto)
-					{   //funciones utilizadas para mostrar la lista
+				do {   //menú para mostrar según el tipo de producto a seleccionar
+				    cout << "---------------------------------------------------------------------" << endl;
+                    cout << "                       LISTA DE PRODUCTOS                            " << endl;
+                    cout << "---------------------------------------------------------------------" << endl;
+                    cout << "1. Camisetas" << endl;
+                    cout << "2. Shorts" << endl;
+                    cout << "3. Zapatillas" << endl;
+                    cout << "4. Canilleras" << endl;
+                    cout << "5. Medias" << endl;
+                    cout << "6. Balones" << endl;
+                    cout << "0. Atrás" << endl;
+                    cout << endl;
+                    cout << "\nIngrese su opción: ";
+					cin  >>producto;
+					cout << endl;
+					
+					switch(producto) {   //funciones utilizadas para mostrar la lista
 						case 1:mostrar_camisetas(camiseta, n1);break;
 						case 2:mostrar_shorts(pantalon_corto, n2);break;
 						case 3:mostrar_zapatillas(calzado, n3);break;
 						case 4:mostrar_canilleras(protectores, n4);break;
 						case 5:mostrar_medias(media_larga, n5);break;
 						case 6:mostrar_balones(pelota, n6);break;
-						default:break;
-					}
+						case 0:break; // Permite salir del sub-menú y volver al menú principal
+						default: cout << "Opción inválida. Por favor, seleccione una opción válida." << endl;
+                    }
 				}
 				while(producto!=0);
-				
 				break;
-			case 2: //franklin
+			}
+		// FRANKLIN 
+			case 2: {
 				int op;
-				do
-				{   
-					cout<<endl<<"seleccione el producto a agregar"<<endl;
-					cout<<"--------------------------------"<<endl;
-					cout<<"1. camisetas"<<endl;
-					cout<<"2. shorts"<<endl;
-					cout<<"3. zapatillas"<<endl;
-					cout<<"4. canilleras"<<endl;
-					cout<<"5. medias"<<endl;
-					cout<<"6. balones"<<endl;
-					cout<<"0. atras"<<endl;
+				do {  
+				    cout << "---------------------------------------------------------------------" << endl;
+                    cout << "                      AGREGAR PRODUCTO                               " << endl;
+                    cout << "---------------------------------------------------------------------" << endl;
+                    cout << "Seleccione el producto a agregar" << endl;
+                    cout << "1. Camisetas" << endl;
+                    cout << "2. Shorts" << endl;
+                    cout << "3. Zapatillas" << endl;
+                    cout << "4. Canilleras" << endl;
+                    cout << "5. Medias" << endl;
+                    cout << "6. Balones" << endl;
+                    cout << "0. Atrás" << endl;
+                    cout << endl;
+                    cout << "\nIngrese su opción: "; 
 					cin>>op;
-					switch(op)
-					{   
-						case 1:
-							agregar_camisetas(camiseta, n1); break;
-						case 2:
-							agregar_shorts(pantalon_corto, n2); break;
-						case 3:
-							agregar_zapatillas(calzado, n3); break;
-						case 4:
-							agregar_canilleras(protectores, n4); break;
-						case 5:
-							agregar_medias( media_larga, n5); break;
-						case 6:
-							agregar_balones(pelota, n6); break;
-						default:break;
+					
+					switch(op) {   
+						case 1:agregar_camisetas(camiseta, n1); break;
+						case 2:agregar_shorts(pantalon_corto, n2); break;
+						case 3:agregar_zapatillas(calzado, n3); break;
+						case 4:agregar_canilleras(protectores, n4); break;
+						case 5:agregar_medias(media_larga, n5); break;
+						case 6:agregar_balones(pelota, n6); break;
+						case 0: break; // Permite salir del sub-menú y volver al menú principal
+                        default: cout << "Opción inválida. Por favor, seleccione una opción válida." << endl;
+                        break;
 					}
 				}
 				while(op!=0); 
 				break;
-			case 3: //franklin
-			    break;
-			case 4: //eber
-			    break;
-			case 5: //cristian
-			    break;
-			case 6: //franklin
-			    break;
-			case 7: //cristian
-			    break;
-		}
-	}
-	while(op!=0);
-	
-	return 0;
+			}
+			// 
+			case 3:{
+				break;
+			}
+		// CRISTIAN 
+			case 4:{ 
+			    int producto_actualizar;
+			    bool indice_valido = false;
+			    do { 
+			        mostar_menu_principal( );
+                    cout << "\nSeleccione el producto que desea actualizar: ";
+                    cin  >> producto_actualizar;
+
+                    if (producto_actualizar >= 1 && producto_actualizar <= 6){
+                        int indice_actualizar;
+                        switch (producto_actualizar){
+                            case 1: {submenu_actualizar_camisetas(camiseta,n1);break;}
+                            case 2: {submenu_actualizar_shorts(pantalon_corto,n2);break;}
+                            case 3: {submenu_actualizar_zapatillas(calzado,n3);break;}
+                            case 4: {submenu_actualizar_canilleras(protectores,n4);break;}
+                            case 5: {submenu_actualizar_medias(media_larga,n5);break;}
+                            case 6: {submenu_actualizar_balones(pelota,n6);break;}
+                            default: break;}
+                    } else {
+                    	cout << "_______________________________________________________________________" << endl;
+                        cout << "\n                            OPCION INVALIDA                          " << endl;
+				        cout << "\n                    POR FAVOR INREGESE UNA OPCION VALIDA             " << endl;    
+                    }
+                } while (producto_actualizar != 0);
+                break;
+            }
+            case 0: {
+            	cout << "\n______________________________________________________________________" << endl;
+                cout << "\n    S A L I E N D O       D E L      P R O G R A M A  .    .   .     " << endl;
+                salir = true; // Marca la salida del programa
+                break;
+            }
+            default: {
+            	cout << "\n_____________________________________________________________________" << endl;
+                cout << "\n                            OPCION INVALIDA                          " << endl;
+				cout << "\n                    POR FAVOR INREGESE UNA OPCION VALIDA             " << endl;
+                break;
+            }
+        }
+    } while (!salir);
+    
+    getch();
+    return 0;
 }
