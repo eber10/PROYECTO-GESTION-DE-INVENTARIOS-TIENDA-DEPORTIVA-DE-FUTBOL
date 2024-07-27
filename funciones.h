@@ -36,4 +36,12 @@ void actualizar_canilleras(canilleras arr[], int &n4, int indice);
 void actualizar_medias(medias arr[], int &n5, int indice);
 void actualizar_balones(balones arr[], int &n6, int indice);
 
+//declarar funciones para eliminar un producto
+void eliminar_camisetas(camisetas arr[], int &n1);
+void eliminar_shorts(shorts arr[], int &n2);
+void eliminar_zapatillas(zapatillas arr[], int &n3);
+void eliminar_canilleras(canilleras arr[], int &n4);
+void eliminar_medias(medias arr[], int &n5);
+void eliminar_balones(balones arr[], int &n6);
+
 #endif
