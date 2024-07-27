@@ -8,7 +8,9 @@ using namespace std;
 
 int main() {   //tam=10 variable utilizado para definir el tamaño, útil para modificar el tamaño de todos los arreglos que utilicen esa variable
     const int tam=100;
-	int n1=10, n2=10, n3=10, n4=10, n5=10, n6=10;
+    const int tem=100;
+	int n1=10, n2=10, n3=10, n4=10, n5=10, n6=10, v1=0;
+	int cont1=0, cont2=0, cont3=0, cont4=0, cont5=0, cont6=0;
 	//productos almacenados inicialmente
 	camisetas camiseta[tam]={
 		{"barca", "M", "adidas", 40.00, 2},  
@@ -83,7 +85,8 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 		{"azul", 4, "adidas", 60.00, 2}
 	};
 	
-	
+	ventas registrar[tem];//arreglo para controlar las ventas realizadas.
+    double total=0;//variable util para sumar el total de ventas realizadas.
 	int opcion;
 	bool salir = false;
 	
@@ -95,6 +98,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
         cout << "2. Agregar producto" << endl;
         cout << "3. Eliminar un producto" << endl;
         cout << "4. Actualizar datos de producto" << endl;
+        cout << "6. Registrar venta" << endl;
         cout << "0. Salir" << endl;
         cout << "\n___________________________________________________________________" << endl;
         cout << "\nIngrese su opción: ";
@@ -242,6 +246,101 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                 } while (producto_actualizar != 0);
                 break;
             }
+            //eber
+            case 6:
+            	int op;
+            	do {  
+            	    //submenú de opciones para seleccionar productos.
+				    cout << "---------------------------------------------------------------------" << endl;
+                    cout << "                      LISTA DE  PRODUCTOS                               " << endl;
+                    cout << "---------------------------------------------------------------------" << endl;
+                    cout << "Seleccione el producto a vender" << endl; 
+                    cout << "1. Camisetas" << endl;
+                    cout << "2. Shorts" << endl;
+                    cout << "3. Zapatillas" << endl;
+                    cout << "4. Canilleras" << endl;
+                    cout << "5. Medias" << endl;
+                    cout << "6. Balones" << endl;
+                    cout << "7. Mostrar el total" << endl;
+                    cout << "0. Atrás" << endl;
+                    cout << endl;
+                    cout << "\nIngrese su opción: "; 
+					cin>>op;
+					switch(op) 
+					{   
+						case 1://caso 1 para registrar una venta en la sección de producto camiseta.
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							mostrar_camisetas(camiseta, n1);
+							registar_ventas(registrar, camiseta, n1, v1, cont1);
+							total=total+registrar[v1].precio_total;
+							break;
+						case 2://caso 2 para registrar una venta en la sección de producto shorts.
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							mostrar_shorts(pantalon_corto, n2);
+							registar_ventas(registrar, pantalon_corto, n2, v1, cont2);
+							total=total+registrar[v1].precio_total;
+							break;
+						case 3://caso 3 para registrar una venta en la sección de producto zapatilla.
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							mostrar_zapatillas(calzado, n3);
+							registar_ventas(registrar, calzado, n3, v1, cont3);
+							total=total+registrar[v1].precio_total;
+							break;
+						case 4://caso 4 para registrar una venta en la sección de producto canilleras.
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							mostrar_canilleras(protectores, n4);
+							registar_ventas(registrar, protectores, n4, v1, cont4);
+							total=total+registrar[v1].precio_total;
+							break;
+						case 5://caso 5 para registrar una venta en la sección de producto medias.
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							mostrar_medias(media_larga, n5);
+							registar_ventas(registrar, media_larga, n5, v1, cont5);
+							total=total+registrar[v1].precio_total;
+							break;
+						case 6://caso 6 para registrar una venta en la sección de producto balones.
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"----------------------------------------------------------------------------------"<<endl;
+							mostrar_balones(pelota, n6);
+							registar_ventas(registrar, pelota, n6, v1, cont6);
+							total=total+registrar[v1].precio_total;
+							break;
+						case 7://caso 7 para mostrar el total de ventas realizadas.
+							if(total!=0)//si se realizo la venta nuestra el precio total, de lo contrario, pide que registres una venta.
+							{
+								cout<<"------------------------------------------------------------------------------"<<endl;
+							    cout<<"                                    CAJERO                                     "<<endl;
+							    cout<<"------------------------------------------------------------------------------"<<endl;
+								cout<<"Precio total: S/. "<<total<<endl;
+							}
+							else
+							{
+								cout<<"--------------------------------------------------------------------------------"<<endl;
+								cout<<"                              REGISTRE UNA VENTA                                "<<endl;
+								cout<<"--------------------------------------------------------------------------------"<<endl;
+							}
+							break;
+						case 0: break; // Permite salir del sub-menú y volver al menú principal
+                        default: cout << "Opción inválida. Por favor, seleccione una opción válida." << endl;
+                        break;
+					}
+				}
+				while(op!=0); 
+				v1++;//v1 es una variable que controla el indice del arreglo registrar[tem], y una vez registrada una venta por usuario avanza al siguiente indice, para nueva venta.
+				total=0;//una vez registrada las ventas y volver al menú principal, el total=0, para no mezclar las ventas realizadas por usuario.
+            	break;
+            	////
             case 0: {
             	cout << "\n______________________________________________________________________" << endl;
                 cout << "\n    S A L I E N D O       D E L      P R O G R A M A  .    .   .     " << endl;

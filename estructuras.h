@@ -55,6 +55,12 @@ struct balones
 	int cantidad;
 };
 
+//estructura para ventas
+struct ventas
+{
+	double precio_total;
+	
+};
 
 
 #endif

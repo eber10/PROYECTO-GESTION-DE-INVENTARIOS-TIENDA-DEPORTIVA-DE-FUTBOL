@@ -589,4 +589,190 @@ void eliminar_balones(balones arr[], int &n6)
 }
 
 
+//eber
+//funciones para registrar una venta
+void registar_ventas(ventas arr1[], camisetas arr2[], int &n1, int &v1, int &cont1)
+{
+	int num;//representa el número del producto camiseta
+	int cant;//representa la cantidad de productos a comprar
+	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
+	if(num<1 or num>n1)
+	{
+		cout<<"---------------------------------------------------------------------------"<<endl;
+		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
+		cout<<"---------------------------------------------------------------------------"<<endl;
+	}
+	else
+	{
+		cout<<"Ingrese la cantidad: "; cin>>cant;
+		if(arr2[num-1].cantidad<cant)
+		{
+			cout<<"------------------------------------------------------------------------"<<endl;
+			cout<<"                 No cuenta con suficientes productos                    "<<endl;
+			cout<<"------------------------------------------------------------------------"<<endl;
+		}
+		else
+		{
+			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
+			arr1[v1].precio_total=0;
+	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
+	        cont1++;
+		}
+	}
+	
+}
+void registar_ventas(ventas arr1[], shorts arr2[], int &n2, int &v1, int &cont2)
+{
+	int num;//representa el número del producto shorts
+	int cant;//representa la cantidad de productos a comprar
+	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
+	if(num<1 or num>n2)
+	{
+		cout<<"---------------------------------------------------------------------------"<<endl;
+		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
+		cout<<"---------------------------------------------------------------------------"<<endl;
+	}
+	else
+	{
+		cout<<"Ingrese la cantidad: "; cin>>cant;
+		if(arr2[num-1].cantidad<cant)
+		{
+			cout<<"------------------------------------------------------------------------"<<endl;
+			cout<<"                 No cuenta con suficientes productos                    "<<endl;
+			cout<<"------------------------------------------------------------------------"<<endl;
+		}
+		else
+		{
+			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
+			arr1[v1].precio_total=0;
+	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
+	        cont2++;
+		}
+	}
+	
+}
+void registar_ventas(ventas arr1[], zapatillas arr2[], int &n3, int &v1, int &cont3)
+{
+	int num;//representa el número del producto zapatillas
+	int cant;//representa la cantidad de productos a comprar
+	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
+	if(num<1 or num>n3)
+	{
+		cout<<"---------------------------------------------------------------------------"<<endl;
+		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
+		cout<<"---------------------------------------------------------------------------"<<endl;
+	}
+	else
+	{
+	    cout<<"Ingrese la cantidad: "; cin>>cant;
+	    if(arr2[num-1].cantidad<cant)
+		{
+			cout<<"------------------------------------------------------------------------"<<endl;
+			cout<<"                 No cuenta con suficientes productos                    "<<endl;
+			cout<<"------------------------------------------------------------------------"<<endl;
+		}
+		else
+		{
+			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
+			arr1[v1].precio_total=0;
+	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
+	        cont3++;
+		}
+	}
+	
+}
+void registar_ventas(ventas arr1[], canilleras arr2[], int &n4, int &v1, int &cont4)
+{
+	int num;//representa el número del producto canilleras
+	int cant;//representa la cantidad de productos a comprar
+	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
+	if(num<1 or num>n4)
+	{
+		cout<<"---------------------------------------------------------------------------"<<endl;
+		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
+		cout<<"---------------------------------------------------------------------------"<<endl;
+	}
+	else
+	{
+		cout<<"Ingrese la cantidad: "; cin>>cant;
+		if(arr2[num-1].cantidad<cant)
+		{
+			cout<<"------------------------------------------------------------------------"<<endl;
+			cout<<"                 No cuenta con suficientes productos                    "<<endl;
+			cout<<"------------------------------------------------------------------------"<<endl;
+		}
+		else
+		{
+			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
+			arr1[v1].precio_total=0;
+	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
+	        cont4++;
+		}
+	    
+	}
+	
+}
+void registar_ventas(ventas arr1[], medias arr2[], int &n5, int &v1, int &cont5)
+{
+	int num;//representa el número del producto medias
+	int cant;//representa la cantidad de productos a comprar
+	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
+	if(num<1 or num>n5)
+	{
+		cout<<"---------------------------------------------------------------------------"<<endl;
+		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
+		cout<<"---------------------------------------------------------------------------"<<endl;
+	}
+	else
+	{
+		cout<<"Ingrese la cantidad: "; cin>>cant;
+		if(arr2[num-1].cantidad<cant)
+		{
+			cout<<"------------------------------------------------------------------------"<<endl;
+			cout<<"                 No cuenta con suficientes productos                    "<<endl;
+			cout<<"------------------------------------------------------------------------"<<endl;
+		}
+		else
+		{
+			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
+			arr1[v1].precio_total=0;
+	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
+	        cont5++;
+		}
+	}
+	
+}
+void registar_ventas(ventas arr1[], balones arr2[], int &n6, int &v1, int &cont6)
+{
+	int num;//representa el número del producto balones
+	int cant;//representa la cantidad de productos a comprar
+	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
+	if(num<1 or num>n6)
+	{
+		cout<<"---------------------------------------------------------------------------"<<endl;
+		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
+		cout<<"---------------------------------------------------------------------------"<<endl;
+	}
+	else
+	{
+		cout<<"Ingrese la cantidad: "; cin>>cant;
+		if(arr2[num-1].cantidad<cant)
+		{
+			cout<<"------------------------------------------------------------------------"<<endl;
+			cout<<"                 No cuenta con suficientes productos                    "<<endl;
+			cout<<"------------------------------------------------------------------------"<<endl;
+		}
+		else
+		{
+			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
+			arr1[v1].precio_total=0;
+	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
+	        cont6++;
+		}
+	}
+	
+}
+
+
+
 
