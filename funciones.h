@@ -44,4 +44,12 @@ void eliminar_canilleras(canilleras arr[], int &n4);
 void eliminar_medias(medias arr[], int &n5);
 void eliminar_balones(balones arr[], int &n6);
 
+//declarar funciones para registrar una venta
+void registar_ventas(ventas arr1[], camisetas arr2[], int &n1, int &v1, int &cont1);
+void registar_ventas(ventas arr1[], shorts arr2[], int &n2, int &v1, int &cont2);
+void registar_ventas(ventas arr1[], zapatillas arr2[], int &n3, int &v1, int &cont3);
+void registar_ventas(ventas arr1[], canilleras arr2[], int &n4, int &v1, int &cont4);
+void registar_ventas(ventas arr1[], medias arr2[], int &n5, int &v1, int &cont5);
+void registar_ventas(ventas arr1[], balones arr2[], int &n6, int &v1, int &cont6);
+
 #endif
