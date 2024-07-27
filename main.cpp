@@ -93,6 +93,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
         cout << "---------------------------------------------------------------------" << endl;
         cout << "1. Mostrar lista de productos" << endl;
         cout << "2. Agregar producto" << endl;
+        cout << "3. Eliminar un producto" << endl;
         cout << "4. Actualizar datos de producto" << endl;
         cout << "0. Salir" << endl;
         cout << "\n___________________________________________________________________" << endl;
@@ -104,7 +105,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 		//  EBER 
 			case 1: {
 				int producto;
-				do {   //menú para mostrar según el tipo de producto a seleccionar
+				do {   //menú para mostrar segun el tipo de producto a seleccionar
 				    cout << "---------------------------------------------------------------------" << endl;
                     cout << "                       LISTA DE PRODUCTOS                            " << endl;
                     cout << "---------------------------------------------------------------------" << endl;
@@ -114,9 +115,9 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                     cout << "4. Canilleras" << endl;
                     cout << "5. Medias" << endl;
                     cout << "6. Balones" << endl;
-                    cout << "0. Atrás" << endl;
+                    cout << "0. Atras" << endl;
                     cout << endl;
-                    cout << "\nIngrese su opción: ";
+                    cout << "\nIngrese su opcion: ";
 					cin  >>producto;
 					cout << endl;
 					
@@ -127,8 +128,8 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 						case 4:mostrar_canilleras(protectores, n4);break;
 						case 5:mostrar_medias(media_larga, n5);break;
 						case 6:mostrar_balones(pelota, n6);break;
-						case 0:break; // Permite salir del sub-menú y volver al menú principal
-						default: cout << "Opción inválida. Por favor, seleccione una opción válida." << endl;
+						case 0:break; // Permite salir del sub-menu y volver al menu principal
+						default: cout << "Opcion invalida. Por favor, seleccione una opcion valida." << endl;
                     }
 				}
 				while(producto!=0);
@@ -148,9 +149,9 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                     cout << "4. Canilleras" << endl;
                     cout << "5. Medias" << endl;
                     cout << "6. Balones" << endl;
-                    cout << "0. Atrás" << endl;
+                    cout << "0. Atras" << endl;
                     cout << endl;
-                    cout << "\nIngrese su opción: "; 
+                    cout << "\nIngrese su opcion: "; 
 					cin>>op;
 					
 					switch(op) {   
@@ -161,15 +162,57 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 						case 5:agregar_medias(media_larga, n5); break;
 						case 6:agregar_balones(pelota, n6); break;
 						case 0: break; // Permite salir del sub-menú y volver al menú principal
-                        default: cout << "Opción inválida. Por favor, seleccione una opción válida." << endl;
+                        default: cout << "Opcion invalida. Por favor, seleccione una opcion valida." << endl;
                         break;
 					}
 				}
 				while(op!=0); 
 				break;
 			}
-			// 
+			// frank
 			case 3:{
+				int eliminar;//opcion para escoger el producto que se desea eliminar 
+				do { //sub-menu de los productos  
+				    cout << "---------------------------------------------------------------------" << endl;
+                    cout << "                      LISTA DE  PRODUCTOS                               " << endl;
+                    cout << "---------------------------------------------------------------------" << endl;
+                    cout << "Seleccione el producto" << endl;
+                    cout << "1. Camisetas" << endl;
+                    cout << "2. Shorts" << endl;
+                    cout << "3. Zapatillas" << endl;
+                    cout << "4. Canilleras" << endl;
+                    cout << "5. Medias" << endl;
+                    cout << "6. Balones" << endl;
+                    cout << "0. Atras" << endl;
+                    cout << endl;
+                    cout << "\nIngrese su opcion: "; 
+					cin>>eliminar;
+					switch(eliminar) 
+					{   
+						case 1:
+						    mostrar_camisetas(camiseta, n1);
+						    eliminar_camisetas(camiseta, n1); break;
+						case 2: 
+							mostrar_shorts(pantalon_corto, n2); 
+							eliminar_shorts(pantalon_corto, n2); break;
+						case 3:
+							mostrar_zapatillas(calzado, n3);	
+							eliminar_zapatillas(calzado, n3); break;
+						case 4:
+							mostrar_canilleras(protectores, n4);
+							eliminar_canilleras(protectores, n4); break;
+						case 5:
+							mostrar_medias(media_larga, n5);
+							eliminar_medias(media_larga, n5); break;
+						case 6:
+							mostrar_balones(pelota, n6);
+							eliminar_balones(pelota, n6); break;
+						case 0: break; // Permite salir del sub-menu y volver al menu principal
+                        default: cout << "Opcion invalida. Por favor, seleccione una opcion valida." << endl;
+                        break;
+					}
+				}
+				while(eliminar!=0); 
 				break;
 			}
 		// CRISTIAN 
