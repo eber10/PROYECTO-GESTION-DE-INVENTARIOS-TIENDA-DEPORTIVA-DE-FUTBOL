@@ -100,6 +100,8 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
         cout << "4. Actualizar datos de producto" << endl;
         cout << "6. Registrar venta" << endl;
         cout << "7. Producto mas vendido" << endl;
+        cout << "8. Historial de ventas" << endl;
+        cout << "9. Mostrar dinero acumulado" <<endl;
         cout << "0. Salir" << endl;
         cout << "\n___________________________________________________________________" << endl;
         cout << "\nIngrese su opcion: ";
@@ -341,10 +343,25 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 				v1++;//v1 es una variable que controla el indice del arreglo registrar[tem], y una vez registrada una venta por usuario avanza al siguiente indice, para nueva venta.
 				total=0;//una vez registrada las ventas y volver al menú principal, el total=0, para no mezclar las ventas realizadas por usuario.
             	break;
-            	////
+            	//// frank
             case 7:
 				producto_mas_vendido(cont1, cont2, cont3, cont4, cont5, cont6);
 				break;
+				//eber
+			case 8:
+				cout<<"------------------------------------------------------------------------------------"<<endl;
+				cout<<"                               HISTORIAL DE VENTAS                                  "<<endl;
+				cout<<"------------------------------------------------------------------------------------"<<endl;
+				historial_ventas(registrar, v1);
+				break;
+				//eber
+			case 9:
+				cout<<"------------------------------------------------------------------------------------"<<endl;
+				cout<<" DINERO ACUMULADO: S/. "<<dinero_acumulado(registrar, v1)<<endl;
+				cout<<"-------------------------------------------------------------------------------------"<<endl;
+				break;
+				
+				
             case 0: {
             	cout << "\n______________________________________________________________________" << endl;
                 cout << "\n    S A L I E N D O       D E L      P R O G R A M A  .    .   .     " << endl;

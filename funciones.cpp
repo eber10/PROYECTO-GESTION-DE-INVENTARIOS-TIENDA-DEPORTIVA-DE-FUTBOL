@@ -815,5 +815,26 @@ void producto_mas_vendido(int &cont1, int &cont2, int &cont3, int &cont4, int &c
 	
 }
 
+// eber 
+//funcion para ver el historial de ventas
+void historial_ventas(ventas arr[], int &v1)
+{
+	for(int i=0; i<v1; i++)
+	{
+		cout<<"VENTA"<<i+1<<": S/. ";
+		cout<<arr[i].precio_total<<endl;
+	}
+}
+//función para mostrar la ganancia total
+double dinero_acumulado(ventas arr[], int &v1)
+{
+	double suma=0;
+	for(int i=0; i<v1; i++)
+	{
+		suma=suma+arr[i].precio_total;
+	}
+	return suma;
+}
+
 
 
