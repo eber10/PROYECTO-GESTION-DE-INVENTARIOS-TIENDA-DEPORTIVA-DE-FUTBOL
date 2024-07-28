@@ -55,4 +55,9 @@ void registar_ventas(ventas arr1[], balones arr2[], int &n6, int &v1, int &cont6
 //declarar funciones para ver el tipo de producto más vendido
 void producto_mas_vendido(int &cont1, int &cont2, int &cont3, int &cont4, int &cont5, int &cont6);
 
+//declarar funciones para mostrar historial de ventas
+void historial_ventas(ventas arr1[], int &v1);
+//declarar funciones para mostrar la ganancia total
+double dinero_acumulado(ventas arr[], int &v1);
+
 #endif
