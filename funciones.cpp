@@ -772,7 +772,48 @@ void registar_ventas(ventas arr1[], balones arr2[], int &n6, int &v1, int &cont6
 	}
 	
 }
-
+//franklin
+//funciones para ver el tipo de producto más vendido
+void producto_mas_vendido(int &cont1, int &cont2, int &cont3, int &cont4, int &cont5, int &cont6)
+{
+	if(cont1>=cont2 and cont1>=cont3 and cont1>=cont4 and cont1>=cont5 and cont1>=cont6)
+	{
+		cout<<"--------------------------------------------------------------------------------"<<endl;
+		cout<<"PRODUCTO MAS VENDIDO: CAMISETAS "<<endl;
+		cout<<"N. de ventas: "<<cont1<<endl;
+	}
+	if(cont2>=cont1 and cont2>=cont3 and cont2>=cont4 and cont2>=cont5 and cont2>=cont6)
+	{
+		cout<<"--------------------------------------------------------------------------------"<<endl;
+		cout<<"PRODUCTO MAS VENDIDO: SHORTS "<<endl;
+		cout<<"N. de ventas: "<<cont2<<endl;
+	}
+	if(cont3>=cont1 and cont3>=cont2 and cont3>=cont4 and cont3>=cont5 and cont3>=cont6)
+	{
+		cout<<"--------------------------------------------------------------------------------"<<endl;
+		cout<<"PRODUCTO MAS VENDIDO: ZAPATILLAS "<<endl;
+		cout<<"N. de ventas: "<<cont3<<endl;
+	}
+	if(cont4>=cont1 and cont4>=cont2 and cont4>=cont3 and cont4>=cont5 and cont4>=cont6)
+	{
+		cout<<"--------------------------------------------------------------------------------"<<endl;
+		cout<<"PRODUCTO MAS VENDIDO: CANILLERAS "<<endl;
+		cout<<"N. de ventas: "<<cont4<<endl;
+	}
+	if(cont5>=cont1 and cont5>=cont2 and cont5>=cont3 and cont5>=cont4 and cont5>=cont6)
+	{
+		cout<<"--------------------------------------------------------------------------------"<<endl;
+		cout<<"PRODUCTO MAS VENDIDO: MEDIAS "<<endl;
+		cout<<"N. de ventas: "<<cont5<<endl;
+	}
+	if(cont6>=cont1 and cont6>=cont2 and cont6>=cont3 and cont6>=cont4 and cont6>=cont5)
+	{
+		cout<<"--------------------------------------------------------------------------------"<<endl;
+		cout<<"PRODUCTO MAS VENDIDO: BALONES "<<endl;
+		cout<<"N. de ventas: "<<cont6<<endl;
+	}
+	
+}
 
 
 
