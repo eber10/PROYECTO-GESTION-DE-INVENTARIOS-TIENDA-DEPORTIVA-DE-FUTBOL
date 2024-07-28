@@ -98,6 +98,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
         cout << "2. Agregar producto" << endl;
         cout << "3. Eliminar un producto" << endl;
         cout << "4. Actualizar datos de producto" << endl;
+        cout << "5. Ordenar alfabeticamnete los productos"<< endl;
         cout << "6. Registrar venta" << endl;
         cout << "7. Producto mas vendido" << endl;
         cout << "8. Historial de ventas" << endl;
@@ -222,7 +223,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 				while(eliminar!=0); 
 				break;
 			}
-		// CRISTIAN 
+		// CRISTIAN - ACTUALIZAR UN PRODUCTO
 			case 4:{ 
 			    int producto_actualizar;
 			    bool indice_valido = false;
@@ -249,6 +250,34 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                 } while (producto_actualizar != 0);
                 break;
             }
+         // CRISTIAN - ORDENAR PRODUCTOS ALFABETICAMENTE
+		    case 5:{
+		    	int producto_ordenado;
+            	bool indice_valido = false;
+            	do {
+			        mostrar_menu_ordenar( );
+                    cout << "\nSeleccione un producto : ";
+                    cin  >> producto_ordenado;
+                    cout << endl;
+		
+                    if (producto_ordenado >= 1 && producto_ordenado <= 6){
+                    	int indice_ordenado;
+                        switch (producto_ordenado){
+                            case 1: {ordenar_camisetas(camiseta,n1),mostrar_camisetas_ordenadas(camiseta,n1);break;}
+                            case 2: {ordenar_shorts(pantalon_corto,n2),mostrar_shorts_ordenados(pantalon_corto,n2);break;}
+                            case 3: {ordenar_zapatillas(calzado,n3),mostrar_zapatillas_ordenadas(calzado,n3);break;}
+                            case 4: {ordenar_canilleras(protectores,n4),mostrar_canilleras_ordenadas(protectores,n4);break;}
+                            case 5: {ordenar_medias(media_larga,n5),mostrar_medias_ordenadas(media_larga,n5);break;}
+                            case 6: {ordenar_balones(pelota,n6),mostrar_balones_ordenados(pelota,n6);break;}
+                            default: break;}
+                    } else {
+                    	cout << "_______________________________________________________________________" << endl;
+                        cout << "\n                            OPCION INVALIDA                          " << endl;
+				        cout << "\n                    POR FAVOR INREGESE UNA OPCION VALIDA             " << endl;    
+                    }
+                } while (producto_ordenado != 0);
+				break;
+			}
             //eber
             case 6:
             	int op;

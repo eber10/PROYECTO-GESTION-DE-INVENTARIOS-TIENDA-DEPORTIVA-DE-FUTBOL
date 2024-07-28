@@ -60,4 +60,33 @@ void historial_ventas(ventas arr1[], int &v1);
 //declarar funciones para mostrar la ganancia total
 double dinero_acumulado(ventas arr[], int &v1);
 
+// declarar funciones para ordenar los productos acfabeticamente
+void mostrar_menu_ordenar( );
+
+bool comparar_camisetas(const camisetas &a, const camisetas &b);
+void ordenar_camisetas(camisetas camiseta[], int &n1);
+void mostrar_camisetas_ordenadas( camisetas camiseta[], int &n1);
+
+bool comparar_shorts( const shorts &a, const shorts &b);
+void ordenar_shorts(shorts pantalon_corto[], int &n2);
+void mostrar_shorts_ordenados(shorts pantalon_corto[], int &n2);
+
+bool comparar_zapatillas(const zapatillas &a, const zapatillas &b);
+void ordenar_zapatillas(zapatillas calzado [], int &n3);
+void mostrar_zapatillas_ordenadas(zapatillas calzado[], int &n3);
+
+bool comparar_canilleras(const canilleras &a, const canilleras &b);
+void ordenar_canilleras(canilleras protectores [], int &n4);
+void mostrar_canilleras_ordenadas(canilleras protectores[], int &n4);
+
+bool comparar_medias(const medias &a, const medias &b);
+void ordenar_medias( medias media_larga [], int &n5);
+void mostrar_medias_ordenadas( medias media_larga [], int &n5);
+
+
+bool comparar_balones(const balones &a, const balones &b);
+void ordenar_balones(balones pelota[], int &n6);
+void mostrar_balones_ordenados (balones pelota[], int &n6);
+
+
 #endif
