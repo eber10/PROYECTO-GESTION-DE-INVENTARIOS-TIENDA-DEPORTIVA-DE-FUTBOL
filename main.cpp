@@ -86,6 +86,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 	};
 	
 	ventas registrar[tem];//arreglo para controlar las ventas realizadas.
+	registrar[v1].precio_total=0;//arreglo para controlar las ventas realizadas, que es útil para sumar el precio total al momento de registrar una venta
     double total=0;//variable util para sumar el total de ventas realizadas.
 	int opcion;
 	bool salir = false;
@@ -295,7 +296,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                     cout << "5. Medias" << endl;
                     cout << "6. Balones" << endl;
                     cout << "7. Mostrar el total" << endl;
-                    cout << "0. Atrás" << endl;
+                    cout << "0. Atras" << endl;
                     cout << endl;
                     cout << "\nIngrese su opción: "; 
 					cin>>op;
@@ -310,6 +311,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 							total=total+registrar[v1].precio_total;
 							break;
 						case 2://caso 2 para registrar una venta en la sección de producto shorts.
+						    total=0;//variable útil para almacenar el precio total realizada en una venta
 							cout<<"----------------------------------------------------------------------------------"<<endl;
 							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
 							cout<<"----------------------------------------------------------------------------------"<<endl;
@@ -318,6 +320,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 							total=total+registrar[v1].precio_total;
 							break;
 						case 3://caso 3 para registrar una venta en la sección de producto zapatilla.
+						    total=0; //variable útil para almacenar el precio total realizada en una venta
 							cout<<"----------------------------------------------------------------------------------"<<endl;
 							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
 							cout<<"----------------------------------------------------------------------------------"<<endl;
@@ -326,6 +329,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 							total=total+registrar[v1].precio_total;
 							break;
 						case 4://caso 4 para registrar una venta en la sección de producto canilleras.
+						    total=0; //variable útil para almacenar el precio total realizada en una venta
 							cout<<"----------------------------------------------------------------------------------"<<endl;
 							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
 							cout<<"----------------------------------------------------------------------------------"<<endl;
@@ -334,6 +338,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 							total=total+registrar[v1].precio_total;
 							break;
 						case 5://caso 5 para registrar una venta en la sección de producto medias.
+						    total=0; //variable útil para almacenar el precio total realizada en una venta
 							cout<<"----------------------------------------------------------------------------------"<<endl;
 							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
 							cout<<"----------------------------------------------------------------------------------"<<endl;
@@ -342,6 +347,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 							total=total+registrar[v1].precio_total;
 							break;
 						case 6://caso 6 para registrar una venta en la sección de producto balones.
+						    total=0; //variable útil para almacenar el precio total realizada en una venta
 							cout<<"----------------------------------------------------------------------------------"<<endl;
 							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
 							cout<<"----------------------------------------------------------------------------------"<<endl;
@@ -372,6 +378,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 				while(op!=0); 
 				v1++;//v1 es una variable que controla el indice del arreglo registrar[tem], y una vez registrada una venta por usuario avanza al siguiente indice, para nueva venta.
 				total=0;//una vez registrada las ventas y volver al menú principal, el total=0, para no mezclar las ventas realizadas por usuario.
+				registrar[v1].precio_total=0;//arreglo util para inicializar en 0 y sumar las ventas una vez terminada una venta anterior
             	break;
             	//// frank
             case 7:

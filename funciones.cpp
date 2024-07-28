@@ -1,7 +1,6 @@
 #include<iostream>
 #include"funciones.h"
 #include"estructuras.h"
-#include<bits/stdc++.h>
 #include<iomanip>
 using namespace std;
 
@@ -174,7 +173,7 @@ void submenu_actualizar_camisetas(camisetas camiseta[], int& n1){
     mostrar_camisetas(camiseta, n1);
     cout << endl;
     cout << "_____________________________________________________________________" << endl;
-    cout << "\nIngrese el índice del producto a actualizar: ";
+    cout << "\nIngrese el numero del producto a actualizar: ";
     cin  >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
@@ -182,7 +181,7 @@ void submenu_actualizar_camisetas(camisetas camiseta[], int& n1){
         actualizar_camisetas(camiseta, n1, indice_actualizar);
     } else {
         cout << "_______________________________________________________________________" << endl;
-        cout << "\n       El INDICE QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
+        cout << "\n       El NUMERO QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
         cout << "\n                    INTENTELO NUEVAMENTE POR FAVOR                   " << endl;
     }
 }
@@ -194,7 +193,7 @@ void submenu_actualizar_shorts(shorts pantalon_corto[], int& n2) {
     mostrar_shorts(pantalon_corto, n2);
     cout << endl;
     cout << "_____________________________________________________________________" << endl;
-    cout << "\nIngrese el índice del producto a actualizar: ";
+    cout << "\nIngrese el numero del producto a actualizar: ";
     cin >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
@@ -202,7 +201,7 @@ void submenu_actualizar_shorts(shorts pantalon_corto[], int& n2) {
         actualizar_shorts(pantalon_corto, n2, indice_actualizar);
     } else {
         cout << "_______________________________________________________________________" << endl;
-        cout << "\n       El INDICE QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
+        cout << "\n       El NUMERO QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
         cout << "\n                    INTENTELO NUEVAMENTE POR FAVOR                   " << endl;  
     }
 }
@@ -215,7 +214,7 @@ void submenu_actualizar_zapatillas(zapatillas zapatillas[], int& n3){
     mostrar_zapatillas( zapatillas, n3);
     cout << endl;
     cout << "_____________________________________________________________________" << endl;
-    cout << "\nIngrese el índice del producto a actualizar: ";
+    cout << "\nIngrese el numero del producto a actualizar: ";
     cin  >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
@@ -223,7 +222,7 @@ void submenu_actualizar_zapatillas(zapatillas zapatillas[], int& n3){
         actualizar_zapatillas(zapatillas, n3, indice_actualizar);
     } else {
         cout << "_______________________________________________________________________" << endl;
-        cout << "\n       El INDICE QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
+        cout << "\n       El NUMERO QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
         cout << "\n                    INTENTELO NUEVAMENTE POR FAVOR                   " << endl;
     }
 }
@@ -236,7 +235,7 @@ void submenu_actualizar_canilleras(canilleras canilleras[], int& n4){
     mostrar_canilleras(canilleras, n4);
     cout << endl,
     cout << "_____________________________________________________________________" << endl;
-    cout << "\nIngrese el índice del producto a actualizar: ";
+    cout << "\nIngrese el numero del producto a actualizar: ";
     cin  >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
@@ -244,7 +243,7 @@ void submenu_actualizar_canilleras(canilleras canilleras[], int& n4){
         actualizar_canilleras(canilleras, n4, indice_actualizar);
     } else {
         cout << "_____________________________________________________________________" << endl;
-        cout << "\n       El INDICE QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
+        cout << "\n       El NUMERO QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
         cout << "\n                    INTENTELO NUEVAMENTE POR FAVOR                   " << endl;
     }
 }
@@ -257,7 +256,7 @@ void submenu_actualizar_medias(medias medias[], int& n5){
     mostrar_medias(medias, n5);
     cout << endl;
     cout << "_____________________________________________________________________" << endl;
-    cout << "\nIngrese el índice del producto a actualizar: ";
+    cout << "\nIngrese el numero del producto a actualizar: ";
     cin  >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
@@ -265,7 +264,7 @@ void submenu_actualizar_medias(medias medias[], int& n5){
         actualizar_medias(medias, n5, indice_actualizar);
     } else {
         cout << "_______________________________________________________________________" << endl;
-        cout << "\n       El INDICE QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
+        cout << "\n       El NUMERO QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
         cout << "\n                    INTENTELO NUEVAMENTE POR FAVOR                   " << endl;
     }	
 }
@@ -278,7 +277,7 @@ void submenu_actualizar_balones(balones balones[], int& n6){
     mostrar_balones(balones, n6);
     cout << endl,
     cout << "_____________________________________________________________________" << endl;
-    cout << "\nIngrese el índice del producto a actualizar: ";
+    cout << "\nIngrese el numero del producto a actualizar: ";
     cin >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
@@ -286,7 +285,7 @@ void submenu_actualizar_balones(balones balones[], int& n6){
     actualizar_balones(balones, n6, indice_actualizar);
     } else {
         cout << "_______________________________________________________________________" << endl;
-        cout << "\n       El INDICE QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
+        cout << "\n       El NUMERO QUE INGRESO NO EXISTE EN EL SISTEMA ACTUALMENTE     " << endl;
         cout << "\n                    INTENTELO NUEVAMENTE POR FAVOR                   " << endl;
     }
 }
@@ -614,7 +613,6 @@ void registar_ventas(ventas arr1[], camisetas arr2[], int &n1, int &v1, int &con
 		else
 		{
 			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
-			arr1[v1].precio_total=0;
 	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
 	        cont1++;
 		}
@@ -644,7 +642,6 @@ void registar_ventas(ventas arr1[], shorts arr2[], int &n2, int &v1, int &cont2)
 		else
 		{
 			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
-			arr1[v1].precio_total=0;
 	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
 	        cont2++;
 		}
@@ -674,7 +671,6 @@ void registar_ventas(ventas arr1[], zapatillas arr2[], int &n3, int &v1, int &co
 		else
 		{
 			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
-			arr1[v1].precio_total=0;
 	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
 	        cont3++;
 		}
@@ -704,7 +700,6 @@ void registar_ventas(ventas arr1[], canilleras arr2[], int &n4, int &v1, int &co
 		else
 		{
 			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
-			arr1[v1].precio_total=0;
 	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
 	        cont4++;
 		}
@@ -735,7 +730,6 @@ void registar_ventas(ventas arr1[], medias arr2[], int &n5, int &v1, int &cont5)
 		else
 		{
 			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
-			arr1[v1].precio_total=0;
 	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
 	        cont5++;
 		}
@@ -765,7 +759,6 @@ void registar_ventas(ventas arr1[], balones arr2[], int &n6, int &v1, int &cont6
 		else
 		{
 			arr2[num-1].cantidad=arr2[num-1].cantidad-cant;
-			arr1[v1].precio_total=0;
 	        arr1[v1].precio_total=arr1[v1].precio_total+(arr2[num-1].precio*cant);
 	        cont6++;
 		}
