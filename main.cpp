@@ -13,76 +13,76 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 	int cont1=0, cont2=0, cont3=0, cont4=0, cont5=0, cont6=0;
 	//productos almacenados inicialmente
 	camisetas camiseta[tam]={
-		{"barca", "M", "adidas", 40.00, 2},  
-		{"madrid", "S", "adidas", 40.00, 2},
-		{"river", "S", "adidas", 40.00, 2},
-		{"psg", "S", "adidas", 40.00, 2},
-		{"cristal", "S", "adidas", 40.00, 2},
-		{"psg", "M", "adidas", 40.00, 2},
-		{"psv", "S", "adidas", 40.00, 2},
-		{"roma", "S", "adidas", 40.00, 2},
-		{"boca", "M", "adidas", 40.00, 2},
-		{"alianza", "M", "adidas", 40.00, 2}
+		{"barca", "M", "adidas", 40.00, 10},  
+		{"madrid", "S", "adidas", 40.00, 10},
+		{"river", "S", "adidas", 40.00, 10},
+		{"psg", "S", "adidas", 40.00, 10},
+		{"cristal", "S", "adidas", 40.00, 10},
+		{"psg", "M", "adidas", 40.00, 10},
+		{"psv", "S", "adidas", 40.00, 10},
+		{"roma", "S", "adidas", 40.00, 10},
+		{"boca", "M", "adidas", 40.00, 10},
+		{"alianza", "M", "adidas", 40.00, 10}
 	};
 	shorts pantalon_corto[tam]={
-		{"rojo", "M", "adidas", 30.00, 2},
-		{"negro", "S", "adidas", 30.00, 2},
-		{"blanco", "S", "adidas", 30.00, 2},
-		{"naranja", "S", "adidas", 30.00, 2},
-		{"verde", "S", "adidas", 30.00, 2},
-		{"plomo", "M", "adidas", 30.00, 2},
-		{"azul", "S", "adidas", 30.00, 2},
-		{"negro", "L", "adidas", 30.00, 2},
-		{"blanco", "M", "adidas", 30.00, 2},
-		{"rojo", "L", "adidas", 30.00, 2}
+		{"rojo", "M", "adidas", 30.00, 10},
+		{"negro", "S", "adidas", 30.00, 10},
+		{"blanco", "S", "adidas", 30.00, 10},
+		{"naranja", "S", "adidas", 30.00, 10},
+		{"verde", "S", "adidas", 30.00, 10},
+		{"plomo", "M", "adidas", 30.00, 10},
+		{"azul", "S", "adidas", 30.00, 10},
+		{"negro", "L", "adidas", 30.00, 10},
+		{"blanco", "M", "adidas", 30.00, 10},
+		{"rojo", "L", "adidas", 30.00, 10}
 	};
 	zapatillas calzado[tam]={
-		{"rojo", 39, "nike", 300.00, 2},
-		{"negro", 20, "puma", 500.00, 2},
-		{"azul", 40, "puma", 400.00, 2},
-		{"rojo", 37, "umbro", 200.00, 2},
-		{"verde", 42, "adidas", 200.00, 2},
-		{"rosado", 45, "nike", 300.00, 2},
-		{"negro", 43, "adidas", 500.00, 2},
-		{"plomo", 35, "puma", 400.00, 2},
-		{"azul", 30, "nike", 300.00, 2},
-		{"verde", 40, "umbro", 300.00, 2}
+		{"rojo", 39, "nike", 300.00, 10},
+		{"negro", 20, "puma", 500.00, 10},
+		{"azul", 40, "puma", 400.00, 10},
+		{"rojo", 37, "umbro", 200.00, 10},
+		{"verde", 42, "adidas", 200.00, 10},
+		{"rosado", 45, "nike", 300.00, 10},
+		{"negro", 43, "adidas", 500.00, 10},
+		{"plomo", 35, "puma", 400.00, 10},
+		{"azul", 30, "nike", 300.00, 10},
+		{"verde", 40, "umbro", 300.00, 10}
 	};
 	canilleras protectores[tam]={
-		{"rojo", "M", "adidas", 30.00, 2},
-		{"verde", "L", "adidas", 30.00, 2},
-		{"azul", "S", "nike", 25.00, 2},
-		{"negro", "M", "nike", 35.00, 2},
-		{"blanco", "L", "nike", 25.00, 2},
-		{"plomo", "S", "adidas", 30.00, 2},
-		{"cafe", "L", "nike", 25.00, 2},
-		{"morado", "M", "adidas", 35.00, 2},
-		{"rosado", "S", "nike", 25.00, 2},
-		{"naranja", "L", "adidas", 30.00, 2}
+		{"rojo", "M", "adidas", 30.00, 10},
+		{"verde", "L", "adidas", 30.00, 10},
+		{"azul", "S", "nike", 25.00, 10},
+		{"negro", "M", "nike", 35.00, 10},
+		{"blanco", "L", "nike", 25.00, 10},
+		{"plomo", "S", "adidas", 30.00, 10},
+		{"cafe", "L", "nike", 25.00, 10},
+		{"morado", "M", "adidas", 35.00, 10},
+		{"rosado", "S", "nike", 25.00, 10},
+		{"naranja", "L", "adidas", 30.00, 10}
 	};
 	medias media_larga[tam]={
-		{"rojo", "M", "adidas", 15.00, 2},
-		{"negro", "S", "adidas", 15.00, 2},
-		{"azul", "L", "adidas", 15.00, 2},
-		{"blanco", "M", "adidas", 15.00, 2},
-		{"verde", "L", "adidas", 15.00, 2},
-		{"naranja", "L", "adidas", 15.00, 2},
-		{"plomo", "S", "adidas", 15.00, 2},
-		{"morado", "M", "adidas", 15.00, 2},
-		{"rosado", "M", "adidas", 15.00, 2},
-		{"cafe", "M", "adidas", 15.00, 2}
+		{"rojo", "M", "adidas", 15.00, 10},
+		{"negro", "S", "adidas", 15.00, 10},
+		{"azul", "L", "adidas", 15.00, 10},
+		{"blanco", "M", "adidas", 15.00, 10},
+		{"verde", "L", "adidas", 15.00, 10},
+		{"naranja", "L", "adidas", 15.00, 10},
+		{"plomo", "S", "adidas", 15.00, 10},
+		{"morado", "M", "adidas", 15.00, 10},
+		{"rosado", "M", "adidas", 15.00, 10},
+		{"cafe", "M", "adidas", 15.00, 10}
 	};
 	balones pelota[tam]={
-		{"azul", 1, "adidas", 70.00, 2},
-		{"blanco", 2, "mibalon", 30.00, 2},
-		{"naranja", 3, "nike", 60.00, 2},
-		{"verde", 4, "adidas", 75.00, 2},
-		{"plomo", 3, "mibalon", 30.00, 2},
-		{"blanco", 5, "adidas", 80.00, 2},
-		{"cafe", 2, "nike", 50.00, 2},
-		{"morado", 1, "adidas", 60.00, 2},
-		{"verde", 5, "nike", 65.00, 2},
-		{"azul", 4, "adidas", 60.00, 2}
+		{"azul", 1, "adidas", 70.00, 10},
+		{"blanco", 2, "mibalon", 30.00, 10},
+		{"naranja", 3, "nike", 60.00, 10},
+		{"verde", 4, "adidas", 75.00, 10},
+		{"plomo", 3, "mibalon", 30.00, 10},
+		{"blanco", 5, "adidas", 80.00, 10},
+		{"cafe", 2, "nike", 50.00, 10},
+		{"morado", 1, "adidas", 60.00, 10},
+		{"verde", 5, "nike", 65.00, 10},
+		{"azul", 4, "adidas", 60.00, 10}
 	};
 	
 	ventas registrar[tem];//arreglo para controlar las ventas realizadas.
@@ -99,9 +99,10 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
         cout << "3. Eliminar un producto" << endl;
         cout << "4. Actualizar datos de producto" << endl;
         cout << "6. Registrar venta" << endl;
+        cout << "7. Producto mas vendido" << endl;
         cout << "0. Salir" << endl;
         cout << "\n___________________________________________________________________" << endl;
-        cout << "\nIngrese su opción: ";
+        cout << "\nIngrese su opcion: ";
         cin  >> opcion;
         cout << endl;
 
@@ -341,6 +342,9 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 				total=0;//una vez registrada las ventas y volver al menú principal, el total=0, para no mezclar las ventas realizadas por usuario.
             	break;
             	////
+            case 7:
+				producto_mas_vendido(cont1, cont2, cont3, cont4, cont5, cont6);
+				break;
             case 0: {
             	cout << "\n______________________________________________________________________" << endl;
                 cout << "\n    S A L I E N D O       D E L      P R O G R A M A  .    .   .     " << endl;
