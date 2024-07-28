@@ -1067,4 +1067,230 @@ void mostrar_balones_ordenados (balones pelota[], int &n6){
 }
 //_______________________________________________________________________________________________________________________________________________________________
 
+//FUNCIONES PARA BUSCAR UN PRODUCTO 
 
+void mostrar_menu_buscar_producto( ){
+	cout << "---------------------------------------------------------------------" << endl;
+    cout << "                         BUSCAR PRODUCTO                             " << endl;
+    cout << "---------------------------------------------------------------------" << endl;
+    cout << "1. Camisetas" << endl;
+    cout << "2. Shorts" << endl;
+    cout << "3. Zapatillas" << endl;
+    cout << "4. Canilleras" << endl;
+    cout << "5. Medias" << endl;
+    cout << "6. Balones" << endl;
+    cout << "0. Atrás" << endl;
+    cout << "\n___________________________________________________________________" << endl;
+}
+
+std::string convertir_caracter(const std::string& palabra){
+	string resultado = palabra;
+	for (int i =0 ; i< resultado.length() ; i++){
+		if (resultado [i] >= 'A' && resultado[i] <= 'Z'){
+			resultado [i]= resultado[i] - 'A' + 'a';
+		}
+	}
+	return resultado;
+}
+
+// FUNCION PARA BUSCAR CAMISETAS
+void buscar_camisetas(camisetas camiseta[],int &n1) {
+    string producto_buscado;
+    cout << "\n      INGRESE EL MODELO DEL PRODUCTO QUE DESEA BUSCAR        "<<endl;
+    cout << "\nModelo : ";
+    cin.ignore();
+    getline(cin, producto_buscado);
+    cout << "----------------------------------------------------------------"<<endl;
+
+    producto_buscado = convertir_caracter(producto_buscado);
+
+    bool encontrado = false;
+    for (int i = 0; i < n1 ; i++) {
+        string nombre_producto= camiseta[i].modelo;
+        nombre_producto = convertir_caracter(nombre_producto);
+        
+        if (nombre_producto == producto_buscado) {
+            cout << "\nPRODUCTO ENCONTRADO \n";
+            cout << "\nMODELO: "  << camiseta[i].modelo   << endl;
+            cout << "\nTALLA: "   << camiseta[i].talla     << endl;
+            cout << "\nMARCA: "   << camiseta[i].marca    << endl;
+            cout << "\nPRECIO: "  << camiseta[i].precio   << endl;
+            cout << "\nCANTIDAD: "<< camiseta[i].cantidad << endl;
+            cout << "\n________________________________________________________"<< endl;
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        cout << "\n EL PRODUCTO QUE BUSCA NO EXISTE EN EL SISTEMA.\n";
+        cout << "_______________________________________________________________"<<endl;
+    }
+}
+
+// FUNCION PARA BUSCAR SHORTS
+void buscar_shorts(shorts pantalon_corto[], int &n2) {
+    string producto_buscado;
+    cout << "\n      INGRESE EL COLOR DEL PRODUCTO QUE DESEA BUSCAR        "<<endl;
+    cout << "\nColor : ";
+    cin.ignore();
+    getline(cin, producto_buscado);
+    cout << "----------------------------------------------------------------"<<endl;
+
+    producto_buscado = convertir_caracter(producto_buscado);
+
+    bool encontrado = false;
+    for (int i = 0; i < n2; i++) {
+        string nombre_producto = pantalon_corto[i].color;
+        nombre_producto = convertir_caracter(nombre_producto);
+        
+        if (nombre_producto == producto_buscado) {
+            cout << "\nPRODUCTO ENCONTRADO \n";
+            cout << "\nCOLOR: "   << pantalon_corto[i].color    << endl;
+            cout << "\nTALLA: "   << pantalon_corto[i].talla    << endl;
+            cout << "\nMARCA: "   << pantalon_corto[i].marca    << endl;
+            cout << "\nPRECIO: "  << pantalon_corto[i].precio   << endl;
+            cout << "\nCANTIDAD: "<< pantalon_corto[i].cantidad << endl;
+            cout << "\n________________________________________________________"<< endl;
+            encontrado = true;
+            break;
+        }
+    }
+    if (!encontrado) {
+        cout << "\n EL PRODUCTO QUE BUSCA NO EXISTE EN EL SISTEMA.\n";
+        cout << "_______________________________________________________________"<<endl;
+    }
+}
+// FUNCION PARA BUSCAR ZAPATILLAS
+void buscar_zapatillas(zapatillas calzado[], int &n3) {
+    string producto_buscado;
+    cout << "\n      INGRESE EL COLOR DEL PRODUCTO QUE DESEA BUSCAR        "<<endl;
+    cout << "\nColor : ";
+    cin.ignore();
+    getline(cin, producto_buscado);
+    cout << "----------------------------------------------------------------"<<endl;
+
+    producto_buscado = convertir_caracter(producto_buscado);
+
+    bool encontrado = false;
+    for (int i = 0; i < n3; i++) {
+        string nombre_producto= calzado[i].color;
+        nombre_producto = convertir_caracter(nombre_producto);
+        
+        if (nombre_producto == producto_buscado) {
+            cout << "\nPRODUCTO ENCONTRADO \n";
+            cout << "\nCOLOR: "   << calzado[i].color    << endl;
+            cout << "\nTALLA: "   << calzado[i].talla    << endl;
+            cout << "\nMARCA: "   << calzado[i].marca    << endl;
+            cout << "\nPRECIO: "  << calzado[i].precio   << endl;
+            cout << "\nCANTIDAD: "<< calzado[i].cantidad << endl;
+            cout << "\n________________________________________________________"<< endl;
+            encontrado = true;
+            break;
+        }
+    }
+
+    if (!encontrado) {
+        cout << "\n EL PORDUCTO QUE BUSCA NO EXISTE EN EL SISTEMA.\n";
+        cout << "_______________________________________________________________"<<endl;
+    }
+}
+// FUNCION PARA BUSCAR CANILLERAS
+void buscar_canilleras(canilleras protectores[], int &n4){
+    string producto_buscado;
+    cout << "\n      INGRESE EL COLOR DEL PRODUCTO QUE DESEA BUSCAR        "<<endl;
+    cout << "\nColor : ";
+    cin.ignore();
+    getline(cin, producto_buscado);
+    cout << "----------------------------------------------------------------"<<endl;
+
+    producto_buscado = convertir_caracter(producto_buscado);
+
+    bool encontrado = false;
+    for (int i = 0; i < n4 ; i++) {
+        string nombre_producto= protectores[i].color;
+        nombre_producto = convertir_caracter(nombre_producto);
+        
+        if (nombre_producto == producto_buscado) {
+            cout << "\nPRODUCTO ENCONTRADO \n";
+            cout << "\nCOLOR: "   << protectores[i].color    << endl;
+            cout << "\nTALLA: "   << protectores[i].talla    << endl;
+            cout << "\nMARCA: "   << protectores[i].marca    << endl;
+            cout << "\nPRECIO: "  << protectores[i].precio   << endl;
+            cout << "\nCANTIDAD: "<< protectores[i].cantidad << endl;
+            cout << "\n________________________________________________________"<< endl;
+            encontrado = true;
+            break;
+        }
+    }
+    if (!encontrado) {
+        cout << "\n EL PORDUCTO QUE BUSCA NO EXISTE EN EL SISTEMA.\n";
+        cout << "_______________________________________________________________"<<endl;
+    }
+}
+// FUNCION PARA BUSCAR MEDIAS
+void buscar_medias(medias media_larga[], int &n5) {
+    string producto_buscado;
+    cout << "\n      INGRESE EL COLOR DEL PRODUCTO QUE DESEA BUSCAR        "<<endl;
+    cout << "\nColor : ";
+    cin.ignore();
+    getline(cin, producto_buscado);
+    cout << "----------------------------------------------------------------"<<endl;
+
+    producto_buscado = convertir_caracter(producto_buscado);
+
+    bool encontrado = false;
+    for (int i = 0; i < n5 ; i++) {
+        string nombre_producto= media_larga[i].color;
+        nombre_producto = convertir_caracter(nombre_producto);
+        
+        if (nombre_producto == producto_buscado) {
+            cout << "\nPRODUCTO ENCONTRADO \n";
+            cout << "\nCOLOR: "   << media_larga[i].color    << endl;
+            cout << "\nTALLA: "   << media_larga[i].talla    << endl;
+            cout << "\nMARCA: "   << media_larga[i].marca    << endl;
+            cout << "\nPRECIO: "  << media_larga[i].precio   << endl;
+            cout << "\nCANTIDAD: "<< media_larga[i].cantidad << endl;
+            cout << "\n________________________________________________________"<< endl;
+            encontrado = true;
+            break;
+        }
+    }
+    if (!encontrado) {
+        cout << "\n EL PORDUCTO QUE BUSCA NO EXISTE EN EL SISTEMA.\n";
+        cout << "_______________________________________________________________"<<endl;
+    }
+}
+// FUNCION PARA BUSCAR BALONES
+void buscar_balones(balones pelota[], int &n6){
+    string producto_buscado;
+    cout << "\n      INGRESE EL COLOR DEL PRODUCTO QUE DESEA BUSCAR        "<<endl;
+    cout << "\nColor : ";
+    cin.ignore();
+    getline(cin, producto_buscado);
+    cout << "----------------------------------------------------------------"<<endl;
+
+    producto_buscado = convertir_caracter(producto_buscado);
+
+    bool encontrado = false;
+    for (int i = 0; i < n6 ; i++) {
+        string nombre_producto= pelota[i].color;
+        nombre_producto = convertir_caracter(nombre_producto);
+        
+        if (nombre_producto == producto_buscado) {
+            cout << "\nPRODUCTO ENCONTRADO \n";
+            cout << "\nCOLOR: "    << pelota[i].color    << endl;
+            cout << "\nTAMAÑO: "   << pelota[i].tamano   << endl;
+            cout << "\nMARCA: "    << pelota[i].marca    << endl;
+            cout << "\nPRECIO: "   << pelota[i].precio   << endl;
+            cout << "\nCANTIDAD: " << pelota[i].cantidad << endl;
+            cout << "\n________________________________________________________"<< endl;
+            encontrado = true;
+            break;
+        }
+    }
+    if (!encontrado) {
+        cout << "\n EL PORDUCTO QUE BUSCA NO EXISTE EN EL SISTEMA.\n";
+        cout << "_______________________________________________________________"<<endl;
+    }
+}

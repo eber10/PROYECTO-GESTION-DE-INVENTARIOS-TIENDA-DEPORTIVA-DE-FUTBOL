@@ -88,5 +88,15 @@ bool comparar_balones(const balones &a, const balones &b);
 void ordenar_balones(balones pelota[], int &n6);
 void mostrar_balones_ordenados (balones pelota[], int &n6);
 
+// DECLARAR FUNCIONES PARA BUSCAR UN PRODUCTO POR SU NOMBRE
+std::string convertir_caracter(const std::string& palabra);
+void mostrar_menu_buscar_producto();
+void buscar_camisetas(camisetas camiseta[], int &n1);
+void buscar_shorts(shorts pantalon_corto[], int &n2);
+void buscar_zapatillas(zapatillas calzado[], int &n3);
+void buscar_canilleras(canilleras protectores[], int &n4);
+void buscar_medias(medias media_larga[], int &n5);
+void buscar_balones(balones pelota[], int &n6);
+
 
 #endif
