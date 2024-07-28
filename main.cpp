@@ -103,6 +103,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
         cout << "7. Producto mas vendido" << endl;
         cout << "8. Historial de ventas" << endl;
         cout << "9. Mostrar dinero acumulado" <<endl;
+        cout << "10.Buscar un producto"<< endl;
         cout << "0. Salir" << endl;
         cout << "\n___________________________________________________________________" << endl;
         cout << "\nIngrese su opcion: ";
@@ -390,7 +391,34 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 				cout<<"-------------------------------------------------------------------------------------"<<endl;
 				break;
 				
-				
+			case 10:{
+				int producto_buscado;
+            	bool indice_valido = false;
+            	do {
+			        mostrar_menu_buscar_producto( );
+                    cout << "\nSeleccione un producto : ";
+                    cin  >> producto_buscado;
+                    cout << endl;
+		
+                    if (producto_buscado >= 1 && producto_buscado <= 6){
+                    	int indice_buscado;
+                        switch (producto_buscado){
+                            case 1: {buscar_camisetas(camiseta, n1); break;}
+                            case 2: {buscar_shorts(pantalon_corto, n2); break;}
+                            case 3: {buscar_zapatillas(calzado, n3); break;}
+                            case 4: {buscar_canilleras(protectores,n4);break;}
+                            case 5: {buscar_medias(media_larga,n5);break;}
+                            case 6: {buscar_balones(pelota,n6);break;}
+                            default: break;}
+                    } else {
+                    	cout << "_______________________________________________________________________" << endl;
+                        cout << "\n                            OPCION INVALIDA                          " << endl;
+				        cout << "\n                    POR FAVOR INREGESE UNA OPCION VALIDA             " << endl;    
+                    }
+                } while (producto_buscado != 0);	
+
+				break;
+			}	
             case 0: {
             	cout << "\n______________________________________________________________________" << endl;
                 cout << "\n    S A L I E N D O       D E L      P R O G R A M A  .    .   .     " << endl;
