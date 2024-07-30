@@ -99,6 +99,7 @@ void agregar_camisetas(camisetas arr[], int &n1)
 	cout<<"ingrese precio: "; cin>>arr[n1].precio;
 	cout<<"ingrese la cantidad:"; cin>>arr[n1].cantidad;
 	n1++;
+	system("cls");
 }
 
 void agregar_shorts(shorts arr[], int &n2)
@@ -109,6 +110,7 @@ void agregar_shorts(shorts arr[], int &n2)
 	cout<<"ingrese precio: "; cin>>arr[n2].precio;
 	cout<<"ingrese la cantidad:"; cin>>arr[n2].cantidad;
 	n2++;
+	system("cls");
 }
 
 void agregar_zapatillas(zapatillas arr[], int &n3)
@@ -119,6 +121,7 @@ void agregar_zapatillas(zapatillas arr[], int &n3)
 	cout<<"ingrese precio: "; cin>>arr[n3].precio;
 	cout<<"ingrese la cantidad:"; cin>>arr[n3].cantidad;
 	n3++;
+	system("cls");
 }
 
 void agregar_canilleras(canilleras arr[], int &n4)
@@ -129,6 +132,7 @@ void agregar_canilleras(canilleras arr[], int &n4)
 	cout<<"ingrese precio: "; cin>>arr[n4].precio;
 	cout<<"ingrese la cantidad:"; cin>>arr[n4].cantidad;
 	n4++;
+	system("cls");
 }
 
 void agregar_medias( medias arr[], int &n5)
@@ -139,6 +143,7 @@ void agregar_medias( medias arr[], int &n5)
 	cout<<"ingrese precio: "; cin>>arr[n5].precio;
 	cout<<"ingrese la cantidad:"; cin>>arr[n5].cantidad;
 	n5++;
+	system("cls");
 }
 
 void agregar_balones(balones arr[], int &n6)
@@ -149,6 +154,7 @@ void agregar_balones(balones arr[], int &n6)
 	cout<<"ingrese precio: "; cin>>arr[n6].precio;
 	cout<<"ingrese la cantidad:"; cin>>arr[n6].cantidad;
 	n6++;
+	system("cls");
 }
 
 // Funcion para modificar los datos de un producto ya registrado con aterioridaad -----------------------------------------------------------------------------
@@ -163,20 +169,21 @@ void mostar_menu_principal( ){
     cout << "5. Medias" << endl;
     cout << "6. Balones" << endl;
     cout << "0. Atrás" << endl;
-    cout << "\n___________________________________________________________________" << endl;
+    cout << "\n_____________________________________________________________________" << endl;
 }
 void submenu_actualizar_camisetas(camisetas camiseta[], int& n1){
 	int indice_actualizar;
-	cout << "---------------------------------------------------------------------" << endl;
-    cout << "                          ACTUALIZAR CAMISETA                        " << endl;
-    cout << "---------------------------------------------------------------------" << endl;
+	cout << "--------------------------------------------------------------------------------------------" << endl;
+    cout << "                                       ACTUALIZAR CAMISETA                                  " << endl;
+    cout << "--------------------------------------------------------------------------------------------" << endl;
     mostrar_camisetas(camiseta, n1);
     cout << endl;
-    cout << "_____________________________________________________________________" << endl;
+    cout << "____________________________________________________________________________________________" << endl;
     cout << "\nIngrese el numero del producto a actualizar: ";
     cin  >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
+    system("cls");
     if (indice_actualizar >= 0 && indice_actualizar <= n1){
         actualizar_camisetas(camiseta, n1, indice_actualizar);
     } else {
@@ -187,16 +194,17 @@ void submenu_actualizar_camisetas(camisetas camiseta[], int& n1){
 }
 void submenu_actualizar_shorts(shorts pantalon_corto[], int& n2) {
     int indice_actualizar;
-    cout << "---------------------------------------------------------------------" << endl;
-    cout << "                          ACTUALIZAR SHORTS                          " << endl;
-    cout << "---------------------------------------------------------------------" << endl;
+    cout << "--------------------------------------------------------------------------------------------" << endl;
+    cout << "                                       ACTUALIZAR SHORTS                                    " << endl;
+    cout << "--------------------------------------------------------------------------------------------" << endl;
     mostrar_shorts(pantalon_corto, n2);
     cout << endl;
-    cout << "_____________________________________________________________________" << endl;
+    cout << "____________________________________________________________________________________________" << endl;
     cout << "\nIngrese el numero del producto a actualizar: ";
     cin >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
+    system("cls");
     if (indice_actualizar >= 0 && indice_actualizar <= n2){
         actualizar_shorts(pantalon_corto, n2, indice_actualizar);
     } else {
@@ -208,16 +216,17 @@ void submenu_actualizar_shorts(shorts pantalon_corto[], int& n2) {
 
 void submenu_actualizar_zapatillas(zapatillas zapatillas[], int& n3){
 	int indice_actualizar;
-	cout << "---------------------------------------------------------------------" << endl;
-    cout << "                     ACTUALIZAR ZAPATILLAS                             " << endl;
-    cout << "---------------------------------------------------------------------" << endl;
+	cout << "--------------------------------------------------------------------------------------------" << endl;
+    cout << "                                       ACTUALIZAR ZAPATILLAS                                " << endl;
+    cout << "--------------------------------------------------------------------------------------------" << endl;
     mostrar_zapatillas( zapatillas, n3);
     cout << endl;
-    cout << "_____________________________________________________________________" << endl;
+    cout << "____________________________________________________________________________________________" << endl;
     cout << "\nIngrese el numero del producto a actualizar: ";
     cin  >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
+    system("cls");
     if (indice_actualizar >= 0 && indice_actualizar <= n3){
         actualizar_zapatillas(zapatillas, n3, indice_actualizar);
     } else {
@@ -229,16 +238,17 @@ void submenu_actualizar_zapatillas(zapatillas zapatillas[], int& n3){
 
 void submenu_actualizar_canilleras(canilleras canilleras[], int& n4){
 	int indice_actualizar;
-	cout << "---------------------------------------------------------------------" << endl;
-    cout << "                     ACTUALIZAR CANILLERAS                           " << endl;
-    cout << "---------------------------------------------------------------------" << endl;
+	cout << "--------------------------------------------------------------------------------------------" << endl;
+    cout << "                                       ACTUALIZAR CANILLERAS                                " << endl;
+    cout << "--------------------------------------------------------------------------------------------" << endl;
     mostrar_canilleras(canilleras, n4);
     cout << endl,
-    cout << "_____________________________________________________________________" << endl;
+    cout << "____________________________________________________________________________________________" << endl;
     cout << "\nIngrese el numero del producto a actualizar: ";
     cin  >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
+    system("cls");
     if (indice_actualizar >= 0 && indice_actualizar <= n4) {
         actualizar_canilleras(canilleras, n4, indice_actualizar);
     } else {
@@ -250,16 +260,17 @@ void submenu_actualizar_canilleras(canilleras canilleras[], int& n4){
 
 void submenu_actualizar_medias(medias medias[], int& n5){
 	int indice_actualizar;
-	cout << "---------------------------------------------------------------------" << endl;
-    cout << "                     ACTUALIZAR MEDIAS                             " << endl;
-    cout << "---------------------------------------------------------------------" << endl;
+	cout << "--------------------------------------------------------------------------------------------" << endl;
+    cout << "                                       ACTUALIZAR MEDIAS                                    " << endl;
+    cout << "--------------------------------------------------------------------------------------------" << endl;
     mostrar_medias(medias, n5);
     cout << endl;
-    cout << "_____________________________________________________________________" << endl;
+    cout << "____________________________________________________________________________________________" << endl;
     cout << "\nIngrese el numero del producto a actualizar: ";
     cin  >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
+    system("cls");
     if (indice_actualizar >= 0 && indice_actualizar <= n5){
         actualizar_medias(medias, n5, indice_actualizar);
     } else {
@@ -271,16 +282,17 @@ void submenu_actualizar_medias(medias medias[], int& n5){
 
 void submenu_actualizar_balones(balones balones[], int& n6){
 	int indice_actualizar;
-	cout << "---------------------------------------------------------------------" << endl;
-    cout << "                     ACTUALIZAR BALONES                             " << endl;
-    cout << "---------------------------------------------------------------------" << endl;
+	cout << "--------------------------------------------------------------------------------------------" << endl;
+    cout << "                                       ACTUALIZAR BALONES                                   " << endl;
+    cout << "--------------------------------------------------------------------------------------------" << endl;
     mostrar_balones(balones, n6);
     cout << endl,
-    cout << "_____________________________________________________________________" << endl;
+    cout << "____________________________________________________________________________________________" << endl;
     cout << "\nIngrese el numero del producto a actualizar: ";
     cin >> indice_actualizar;
     cout << "_____________________________________________________________________" << endl;
     cout << endl;
+    system("cls");
     if (indice_actualizar >= 0 && indice_actualizar <= n6){
     actualizar_balones(balones, n6, indice_actualizar);
     } else {
@@ -322,6 +334,7 @@ void actualizar_camisetas(camisetas arr[], int &n1, int indice ){
 	 cout << "Nueva cantidad : ";
 	 cin  >> arr[indice-1].cantidad;
 	 cout << endl;  
+	 system("cls");
 	 cout << "\n          EL PRODUCTO HA SIDO ACTUALIZADO CORRECTAMENTE              " << endl;
 }
 
@@ -356,6 +369,7 @@ void actualizar_shorts(shorts arr[], int &n2, int indice){
 	 cout << "Nueva cantidad : ";
 	 cin  >> arr[indice-1].cantidad;
 	 cout << endl;
+	 system("cls");
 	 cout << "\n          EL PRODUCTO HA SIDO ACTUALIZADO CORRECTAMENTE              " << endl;
 }
 void actualizar_zapatillas(zapatillas arr[], int &n3, int indice){
@@ -389,6 +403,7 @@ void actualizar_zapatillas(zapatillas arr[], int &n3, int indice){
 	 cout << "Nueva cantidad: ";
 	 cin  >> arr[indice-1].cantidad;
 	 cout << endl;
+	 system("cls");
 	 cout << "\n         EL PRODUCTO HA SIDO ACTUALIZADO CORRECTAMENTE               " << endl;	
 }
 void actualizar_canilleras(canilleras arr[], int &n4, int indice){
@@ -422,6 +437,7 @@ void actualizar_canilleras(canilleras arr[], int &n4, int indice){
 	 cout << "Nueva cantidad: ";
 	 cin  >> arr[indice-1].cantidad;
 	 cout << endl;
+	 system("cls");
 	 cout << "\n          EL PRODUCTO HA SIDO ACTUALIZADO CORRECTAMENTE               " << endl;
 }
 void actualizar_medias(medias arr[], int &n5, int indice){
@@ -455,6 +471,7 @@ void actualizar_medias(medias arr[], int &n5, int indice){
 	 cout << "Nueva cantidad: ";
 	 cin  >> arr[indice-1].cantidad;
 	 cout << endl;
+	 system("cls");
 	 cout << "\n         EL PRODUCTO HA SIDO ACTUALIZADO CORRECTAMENTE               " << endl;
 	
 	
@@ -491,6 +508,7 @@ void actualizar_balones(balones arr[], int &n6, int indice ){
 	 cout << "Nueva cantidad : ";
 	 cin  >> arr[indice-1].cantidad;
 	 cout << endl;
+	 system("cls");
 	 cout << "\n          EL PRODUCTO HA SIDO ACTUALIZADO CORRECTAMENTE               " << endl;	
 }
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -597,13 +615,15 @@ void registar_ventas(ventas arr1[], camisetas arr2[], int &n1, int &v1, int &con
 	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
 	if(num<1 or num>n1)
 	{
-		cout<<"---------------------------------------------------------------------------"<<endl;
-		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
-		cout<<"---------------------------------------------------------------------------"<<endl;
+		system("cls");
+		cout<<"---------------------------------------------------------------------"<<endl;
+		cout<<"                Ingrese un numero valido segun la lista              "<<endl;
+		cout<<"---------------------------------------------------------------------"<<endl;
 	}
 	else
 	{
 		cout<<"Ingrese la cantidad: "; cin>>cant;
+		system("cls");
 		if(arr2[num-1].cantidad<cant)
 		{
 			cout<<"------------------------------------------------------------------------"<<endl;
@@ -626,13 +646,15 @@ void registar_ventas(ventas arr1[], shorts arr2[], int &n2, int &v1, int &cont2)
 	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
 	if(num<1 or num>n2)
 	{
-		cout<<"---------------------------------------------------------------------------"<<endl;
-		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
-		cout<<"---------------------------------------------------------------------------"<<endl;
+		system("cls");
+		cout<<"---------------------------------------------------------------------"<<endl;
+		cout<<"                Ingrese un numero valido segun la lista              "<<endl;
+		cout<<"---------------------------------------------------------------------"<<endl;
 	}
 	else
 	{
 		cout<<"Ingrese la cantidad: "; cin>>cant;
+		system("cls");
 		if(arr2[num-1].cantidad<cant)
 		{
 			cout<<"------------------------------------------------------------------------"<<endl;
@@ -655,13 +677,15 @@ void registar_ventas(ventas arr1[], zapatillas arr2[], int &n3, int &v1, int &co
 	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
 	if(num<1 or num>n3)
 	{
-		cout<<"---------------------------------------------------------------------------"<<endl;
-		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
-		cout<<"---------------------------------------------------------------------------"<<endl;
+		system("cls");
+		cout<<"---------------------------------------------------------------------"<<endl;
+		cout<<"                Ingrese un numero valido segun la lista              "<<endl;
+		cout<<"---------------------------------------------------------------------"<<endl;
 	}
 	else
 	{
 	    cout<<"Ingrese la cantidad: "; cin>>cant;
+	    system("cls");
 	    if(arr2[num-1].cantidad<cant)
 		{
 			cout<<"------------------------------------------------------------------------"<<endl;
@@ -684,13 +708,15 @@ void registar_ventas(ventas arr1[], canilleras arr2[], int &n4, int &v1, int &co
 	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
 	if(num<1 or num>n4)
 	{
-		cout<<"---------------------------------------------------------------------------"<<endl;
-		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
-		cout<<"---------------------------------------------------------------------------"<<endl;
+		system("cls");
+		cout<<"---------------------------------------------------------------------"<<endl;
+		cout<<"                Ingrese un numero valido segun la lista              "<<endl;
+		cout<<"---------------------------------------------------------------------"<<endl;
 	}
 	else
 	{
 		cout<<"Ingrese la cantidad: "; cin>>cant;
+		system("cls");
 		if(arr2[num-1].cantidad<cant)
 		{
 			cout<<"------------------------------------------------------------------------"<<endl;
@@ -714,13 +740,15 @@ void registar_ventas(ventas arr1[], medias arr2[], int &n5, int &v1, int &cont5)
 	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
 	if(num<1 or num>n5)
 	{
-		cout<<"---------------------------------------------------------------------------"<<endl;
-		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
-		cout<<"---------------------------------------------------------------------------"<<endl;
+		system("cls");
+		cout<<"---------------------------------------------------------------------"<<endl;
+		cout<<"                Ingrese un numero valido segun la lista              "<<endl;
+		cout<<"---------------------------------------------------------------------"<<endl;
 	}
 	else
 	{
 		cout<<"Ingrese la cantidad: "; cin>>cant;
+		system("cls");
 		if(arr2[num-1].cantidad<cant)
 		{
 			cout<<"------------------------------------------------------------------------"<<endl;
@@ -743,13 +771,15 @@ void registar_ventas(ventas arr1[], balones arr2[], int &n6, int &v1, int &cont6
 	cout<<"Ingrese el numero del producto a vender: "; cin>>num;
 	if(num<1 or num>n6)
 	{
-		cout<<"---------------------------------------------------------------------------"<<endl;
-		cout<<"                  Ingrese un numero valido segun la lista                  "<<endl;
-		cout<<"---------------------------------------------------------------------------"<<endl;
+		system("cls");
+		cout<<"---------------------------------------------------------------------"<<endl;
+		cout<<"                Ingrese un numero valido segun la lista              "<<endl;
+		cout<<"---------------------------------------------------------------------"<<endl;
 	}
 	else
 	{
 		cout<<"Ingrese la cantidad: "; cin>>cant;
+		system("cls");
 		if(arr2[num-1].cantidad<cant)
 		{
 			cout<<"------------------------------------------------------------------------"<<endl;
@@ -773,37 +803,37 @@ void producto_mas_vendido(int &cont1, int &cont2, int &cont3, int &cont4, int &c
 	{
 		cout<<"--------------------------------------------------------------------------------"<<endl;
 		cout<<"PRODUCTO MAS VENDIDO: CAMISETAS "<<endl;
-		cout<<"N. de ventas: "<<cont1<<endl;
+		cout<<"N. de clientes: "<<cont1<<endl;
 	}
 	if(cont2>=cont1 and cont2>=cont3 and cont2>=cont4 and cont2>=cont5 and cont2>=cont6)
 	{
 		cout<<"--------------------------------------------------------------------------------"<<endl;
 		cout<<"PRODUCTO MAS VENDIDO: SHORTS "<<endl;
-		cout<<"N. de ventas: "<<cont2<<endl;
+		cout<<"N. de clientes: "<<cont2<<endl;
 	}
 	if(cont3>=cont1 and cont3>=cont2 and cont3>=cont4 and cont3>=cont5 and cont3>=cont6)
 	{
 		cout<<"--------------------------------------------------------------------------------"<<endl;
 		cout<<"PRODUCTO MAS VENDIDO: ZAPATILLAS "<<endl;
-		cout<<"N. de ventas: "<<cont3<<endl;
+		cout<<"N. de clientes: "<<cont3<<endl;
 	}
 	if(cont4>=cont1 and cont4>=cont2 and cont4>=cont3 and cont4>=cont5 and cont4>=cont6)
 	{
 		cout<<"--------------------------------------------------------------------------------"<<endl;
 		cout<<"PRODUCTO MAS VENDIDO: CANILLERAS "<<endl;
-		cout<<"N. de ventas: "<<cont4<<endl;
+		cout<<"N. de clientes: "<<cont4<<endl;
 	}
 	if(cont5>=cont1 and cont5>=cont2 and cont5>=cont3 and cont5>=cont4 and cont5>=cont6)
 	{
 		cout<<"--------------------------------------------------------------------------------"<<endl;
 		cout<<"PRODUCTO MAS VENDIDO: MEDIAS "<<endl;
-		cout<<"N. de ventas: "<<cont5<<endl;
+		cout<<"N. de clientes: "<<cont5<<endl;
 	}
 	if(cont6>=cont1 and cont6>=cont2 and cont6>=cont3 and cont6>=cont4 and cont6>=cont5)
 	{
 		cout<<"--------------------------------------------------------------------------------"<<endl;
 		cout<<"PRODUCTO MAS VENDIDO: BALONES "<<endl;
-		cout<<"N. de ventas: "<<cont6<<endl;
+		cout<<"N. de clientes: "<<cont6<<endl;
 	}
 	
 }
@@ -1093,7 +1123,7 @@ void buscar_camisetas(camisetas camiseta[],int &n1) {
     cout << "\nModelo : ";
     cin.ignore();
     getline(cin, producto_buscado);
-    cout << "----------------------------------------------------------------"<<endl;
+    cout << "---------------------------------------------------------------------"<<endl;
 
     producto_buscado = convertir_caracter(producto_buscado);
 
@@ -1109,7 +1139,7 @@ void buscar_camisetas(camisetas camiseta[],int &n1) {
             cout << "\nMARCA: "   << camiseta[i].marca    << endl;
             cout << "\nPRECIO: "  << camiseta[i].precio   << endl;
             cout << "\nCANTIDAD: "<< camiseta[i].cantidad << endl;
-            cout << "\n________________________________________________________"<< endl;
+            cout << "\n_____________________________________________________________________"<< endl;
             encontrado = true;
             break;
         }

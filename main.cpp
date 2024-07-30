@@ -110,15 +110,15 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
         cout << "\nIngrese su opcion: ";
         cin  >> opcion;
         cout << endl;
-
+        system("cls");
 		switch(opcion) {   //opción 1 que contiene un menú, muestra una lista de productos según la opción a elegir
 		//  EBER 
 			case 1: {
 				int producto;
 				do {   //menú para mostrar segun el tipo de producto a seleccionar
-				    cout << "---------------------------------------------------------------------" << endl;
-                    cout << "                       LISTA DE PRODUCTOS                            " << endl;
-                    cout << "---------------------------------------------------------------------" << endl;
+				    cout << "--------------------------------------------------------------------------------------------" << endl;
+                    cout << "                                      LISTA DE PRODUCTOS                                    " << endl;
+                    cout << "--------------------------------------------------------------------------------------------" << endl;
                     cout << "1. Camisetas" << endl;
                     cout << "2. Shorts" << endl;
                     cout << "3. Zapatillas" << endl;
@@ -130,7 +130,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                     cout << "\nIngrese su opcion: ";
 					cin  >>producto;
 					cout << endl;
-					
+					system("cls");
 					switch(producto) {   //funciones utilizadas para mostrar la lista
 						case 1:mostrar_camisetas(camiseta, n1);break;
 						case 2:mostrar_shorts(pantalon_corto, n2);break;
@@ -163,7 +163,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                     cout << endl;
                     cout << "\nIngrese su opcion: "; 
 					cin>>op;
-					
+					system("cls");
 					switch(op) {   
 						case 1:agregar_camisetas(camiseta, n1); break;
 						case 2:agregar_shorts(pantalon_corto, n2); break;
@@ -183,9 +183,9 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 			case 3:{
 				int eliminar;//opcion para escoger el producto que se desea eliminar 
 				do { //sub-menu de los productos  
-				    cout << "---------------------------------------------------------------------" << endl;
-                    cout << "                      LISTA DE  PRODUCTOS                               " << endl;
-                    cout << "---------------------------------------------------------------------" << endl;
+				    cout << "--------------------------------------------------------------------------------------------" << endl;
+                    cout << "                                    LISTA DE  PRODUCTOS                                     " << endl;
+                    cout << "--------------------------------------------------------------------------------------------" << endl;
                     cout << "Seleccione el producto" << endl;
                     cout << "1. Camisetas" << endl;
                     cout << "2. Shorts" << endl;
@@ -197,6 +197,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                     cout << endl;
                     cout << "\nIngrese su opcion: "; 
 					cin>>eliminar;
+					system("cls");
 					switch(eliminar) 
 					{   
 						case 1:
@@ -233,8 +234,8 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 			        mostar_menu_principal( );
                     cout << "\nSeleccione el producto que desea actualizar: ";
                     cin  >> producto_actualizar;
-
-                    if (producto_actualizar >= 1 && producto_actualizar <= 6){
+                    system("cls");
+                    if (producto_actualizar >= 1 or producto_actualizar <= 6){
                         int indice_actualizar;
                         switch (producto_actualizar){
                             case 1: {submenu_actualizar_camisetas(camiseta,n1);break;}
@@ -261,8 +262,8 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                     cout << "\nSeleccione un producto : ";
                     cin  >> producto_ordenado;
                     cout << endl;
-		
-                    if (producto_ordenado >= 1 && producto_ordenado <= 6){
+		            system("cls");
+                    if (producto_ordenado >= 1 or producto_ordenado <= 6){
                     	int indice_ordenado;
                         switch (producto_ordenado){
                             case 1: {ordenar_camisetas(camiseta,n1),mostrar_camisetas_ordenadas(camiseta,n1);break;}
@@ -271,7 +272,7 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                             case 4: {ordenar_canilleras(protectores,n4),mostrar_canilleras_ordenadas(protectores,n4);break;}
                             case 5: {ordenar_medias(media_larga,n5),mostrar_medias_ordenadas(media_larga,n5);break;}
                             case 6: {ordenar_balones(pelota,n6),mostrar_balones_ordenados(pelota,n6);break;}
-                            default: break;}
+                            default:break;}
                     } else {
                     	cout << "_______________________________________________________________________" << endl;
                         cout << "\n                            OPCION INVALIDA                          " << endl;
@@ -300,57 +301,58 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                     cout << endl;
                     cout << "\nIngrese su opción: "; 
 					cin>>op;
+					system("cls");
 					switch(op) 
 					{   
 						case 1://caso 1 para registrar una venta en la sección de producto camiseta.
-							cout<<"----------------------------------------------------------------------------------"<<endl;
-							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
-							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
+							cout<<"                                       PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
 							mostrar_camisetas(camiseta, n1);
 							registar_ventas(registrar, camiseta, n1, v1, cont1);
 							total=total+registrar[v1].precio_total;
 							break;
 						case 2://caso 2 para registrar una venta en la sección de producto shorts.
 						    total=0;//variable útil para almacenar el precio total realizada en una venta
-							cout<<"----------------------------------------------------------------------------------"<<endl;
-							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
-							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
+							cout<<"                                       PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
 							mostrar_shorts(pantalon_corto, n2);
 							registar_ventas(registrar, pantalon_corto, n2, v1, cont2);
 							total=total+registrar[v1].precio_total;
 							break;
 						case 3://caso 3 para registrar una venta en la sección de producto zapatilla.
 						    total=0; //variable útil para almacenar el precio total realizada en una venta
-							cout<<"----------------------------------------------------------------------------------"<<endl;
-							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
-							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
+							cout<<"                                       PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
 							mostrar_zapatillas(calzado, n3);
 							registar_ventas(registrar, calzado, n3, v1, cont3);
 							total=total+registrar[v1].precio_total;
 							break;
 						case 4://caso 4 para registrar una venta en la sección de producto canilleras.
 						    total=0; //variable útil para almacenar el precio total realizada en una venta
-							cout<<"----------------------------------------------------------------------------------"<<endl;
-							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
-							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
+							cout<<"                                       PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
 							mostrar_canilleras(protectores, n4);
 							registar_ventas(registrar, protectores, n4, v1, cont4);
 							total=total+registrar[v1].precio_total;
 							break;
 						case 5://caso 5 para registrar una venta en la sección de producto medias.
 						    total=0; //variable útil para almacenar el precio total realizada en una venta
-							cout<<"----------------------------------------------------------------------------------"<<endl;
-							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
-							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
+							cout<<"                                       PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
 							mostrar_medias(media_larga, n5);
 							registar_ventas(registrar, media_larga, n5, v1, cont5);
 							total=total+registrar[v1].precio_total;
 							break;
 						case 6://caso 6 para registrar una venta en la sección de producto balones.
 						    total=0; //variable útil para almacenar el precio total realizada en una venta
-							cout<<"----------------------------------------------------------------------------------"<<endl;
-							cout<<"                             PRODUCTOS ACTUALES                                   "<<endl;
-							cout<<"----------------------------------------------------------------------------------"<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
+							cout<<"                                       PRODUCTOS ACTUALES                                   "<<endl;
+							cout<<"--------------------------------------------------------------------------------------------"<<endl;
 							mostrar_balones(pelota, n6);
 							registar_ventas(registrar, pelota, n6, v1, cont6);
 							total=total+registrar[v1].precio_total;
@@ -386,16 +388,16 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
 				break;
 				//eber
 			case 8:
-				cout<<"------------------------------------------------------------------------------------"<<endl;
-				cout<<"                               HISTORIAL DE VENTAS                                  "<<endl;
-				cout<<"------------------------------------------------------------------------------------"<<endl;
+				cout<<"---------------------------------------------------------------------"<<endl;
+				cout<<"                         HISTORIAL DE VENTAS                         "<<endl;
+				cout<<"---------------------------------------------------------------------"<<endl;
 				historial_ventas(registrar, v1);
 				break;
 				//eber
 			case 9:
-				cout<<"------------------------------------------------------------------------------------"<<endl;
+				cout<<"---------------------------------------------------------------------"<<endl;
 				cout<<" DINERO ACUMULADO: S/. "<<dinero_acumulado(registrar, v1)<<endl;
-				cout<<"-------------------------------------------------------------------------------------"<<endl;
+				cout<<"---------------------------------------------------------------------"<<endl;
 				break;
 				
 			case 10:{
@@ -406,8 +408,8 @@ int main() {   //tam=10 variable utilizado para definir el tamaño, útil para mod
                     cout << "\nSeleccione un producto : ";
                     cin  >> producto_buscado;
                     cout << endl;
-		
-                    if (producto_buscado >= 1 && producto_buscado <= 6){
+		            system("cls");
+                    if (producto_buscado >= 1 or producto_buscado <= 6){
                     	int indice_buscado;
                         switch (producto_buscado){
                             case 1: {buscar_camisetas(camiseta, n1); break;}
